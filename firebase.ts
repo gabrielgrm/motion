@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAGU6GUgHZSfrSKiEmL3Md3vcJi4PBkFeI",
-  authDomain: "motion-88beb.firebaseapp.com",
-  projectId: "motion-88beb",
-  storageBucket: "motion-88beb.firebasestorage.app",
-  messagingSenderId: "242552814757",
-  appId: "1:242552814757:web:5402f63e2dee344ee7614c"
+  apiKey: "AIzaSyD4R3YAIhmInuNkP6XpxLu0sB_MoCyCI2s",
+  authDomain: "motion-b4a28.firebaseapp.com",
+  projectId: "motion-b4a28",
+  storageBucket: "motion-b4a28.firebasestorage.app",
+  messagingSenderId: "543652437682",
+  appId: "1:543652437682:web:600178ed991f84e78ff3ab"
 };
 
 // Initialize Firebase
