@@ -75,14 +75,14 @@ function Sidebar() {
 
   const menuOptions = (
     <>
-      <NewDocumentButton/>
-      <div>
+      <div className="text-center">
+        <NewDocumentButton/>
         {/* My Documents */}
         {groupedData.owner.length === 0 ? (
-          <h2 className="text-gray-500 font-semibold text-sm">Nenhum documento encontrado</h2>
+          <h2 className="text-gray-500 font-semibold text-sm m-2 max-w-30">Nenhum documento encontrado</h2>
         ): (
           <>
-            <h2 className="text-gray-500 font-semibold text-sm">Meus Documentos</h2>
+            <h2 className="text-gray-500 font-semibold text-sm m-2">Meus Documentos</h2>
             {groupedData.owner.map((doc) => (
               <SidebarOption key={doc.roomId} id={doc.roomId} href={`/doc/${doc.roomId}`}/>
             ))}
@@ -95,22 +95,22 @@ function Sidebar() {
   );
 
   return (
-    <div className="p-2 md:p-5 bg-gray-200 relative">
+    <div className="p-2 md:p-5 bg-gray-200 relative text-center">
       <div className="md:hidden">
-      <Sheet>
-        <SheetTrigger>
-          <MenuIcon className="p-2 hover:opacity-30 rounded-lg" size={40}
-          />
-        </SheetTrigger>
-        <SheetContent side="left">
-          <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <div>
-              {menuOptions}
-            </div>
-          </SheetHeader>
-        </SheetContent>
-      </Sheet>
+        <Sheet>
+          <SheetTrigger>
+            <MenuIcon className="p-2 hover:opacity-30 rounded-lg" size={40}
+            />
+          </SheetTrigger>
+          <SheetContent side="left">
+            <SheetHeader>
+              <SheetTitle className="text-center">Menu</SheetTitle>
+              <div>
+                {menuOptions}
+              </div>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </div>
       <div className="hidden md:inline">
         {menuOptions}
