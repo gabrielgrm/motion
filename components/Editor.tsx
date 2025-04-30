@@ -1,7 +1,6 @@
 'use client'
 import { useRoom, useSelf } from "@liveblocks/react/suspense"
 import { useEffect, useState } from "react"
-import * as Y from "yjs"
 import { LiveblocksYjsProvider } from "@liveblocks/yjs"
 import { MoonIcon, SunIcon } from "lucide-react"
 import { Button } from "./ui/button"
@@ -11,6 +10,9 @@ import {useCreateBlockNote} from "@blocknote/react"
 import "@blocknote/core/fonts/inter.css"
 import "@blocknote/shadcn/style.css"
 import stringToColor from "@/lib/stringToColor"
+import * as Y from "yjs";
+import { WebrtcProvider } from "y-webrtc";
+
 
 type EditorProps = {
     doc: Y.Doc;

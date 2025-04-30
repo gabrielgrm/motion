@@ -7,12 +7,14 @@ import { doc, updateDoc } from "firebase/firestore"
 import { db } from "@/firebase"
 import { useDocumentData } from "react-firebase-hooks/firestore"
 import Editor from "./Editor"
+import useOwner from "@/lib/useOwner"
+import DeleteDocument from "./DeleteDocument"
 
 function Document({id}: {id: string}) {
   const [data, loading, error] = useDocumentData(doc(db, "documents", id))
   const [input, setInput] = useState("")
   const [isUpdating, startTransition] = useTransition();
-  // const isOwner = useOwner();
+  const isOwner = useOwner();
 
   useEffect(() => {
     if(data) {
@@ -48,6 +50,13 @@ function Document({id}: {id: string}) {
             {isUpdating ? "Atualizando..." : "Atualizar"}
           </Button>
           {/* IF */}
+          {isOwner && (
+            <>
+            {/* Invite  */}
+            {/* DeleteDocument */}
+            <DeleteDocument/>
+            </>
+          )}
         </form>
       </div>
 
