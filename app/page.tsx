@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { ArrowLeftCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="">
-      <h1>Motion aplicativo inspirado no notion</h1>
-      <Button className="cursor-pointer">Clique aqui</Button>
+    <main className="flex space-x-2 items-center animate-pulse">
+      <ArrowLeftCircle className="w-12 h-12"/>
+      <h1>Começe criando um <strong>Novo Documento!</strong></h1>
     </main>
   );
 }

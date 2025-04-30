@@ -90,6 +90,14 @@ function Sidebar() {
         )}
       </div>
       {/* Shared with me  */}
+      {groupedData.editor.length > 0 && (
+        <>
+          <h2 className="text-gray-500 font-semibold text-sm m-2">Compartilhado com Você</h2>
+          {groupedData.editor.map((doc) => (
+            <SidebarOption key={doc.roomId} id={doc.roomId} href={`/doc/${doc.id}`}  />
+          ))}
+        </>
+      )}
       {/* List.... */}
     </>
   );
@@ -99,7 +107,7 @@ function Sidebar() {
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
-            <MenuIcon className="p-2 hover:opacity-30 rounded-lg" size={40}
+            <MenuIcon className="p-2 text-black hover:opacity-30 rounded-lg" size={40}
             />
           </SheetTrigger>
           <SheetContent side="left">
