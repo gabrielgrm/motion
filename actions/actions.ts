@@ -10,7 +10,7 @@ export async function createNewDocument() {
 
   const docCollectionRef = adminDb.collection("documents");
   const docRef = await docCollectionRef.add({
-    tittle: "New Doc"
+    tittle: "Novo Documento"
   })
 
   await adminDb.collection('users').doc(sessionClaims?.email!).collection('rooms').doc(docRef.id).set({
