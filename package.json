@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "resolutions": {
-  "yjs": "^13.6.26"
+    "yjs": "^13.6.26"
   },
   "dependencies": {
     "@blocknote/core": "^0.29.1",
@@ -24,8 +24,10 @@
     "@liveblocks/react-blocknote": "^2.24.1",
     "@liveblocks/react-ui": "^2.24.1",
     "@opentelemetry/api": "^1.9.0",
+    "@radix-ui/react-avatar": "^1.1.8",
     "@radix-ui/react-dialog": "^1.1.11",
     "@radix-ui/react-slot": "^1.2.0",
+    "@radix-ui/react-tooltip": "^1.2.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^11.6.1",
