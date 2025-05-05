@@ -14,8 +14,13 @@ export async function createNewDocument() {
     tittle: "Novo Documento"
   })
 
-  await adminDb.collection('users').doc(sessionClaims?.email!).collection('rooms').doc(docRef.id).set({
-    userId: sessionClaims?.email!,
+  const userEmail = sessionClaims?.email;
+  if (!userEmail) {
+    throw new Error("Email is undefined in session claims");
+  }
+
+  await adminDb.collection('users').doc(userEmail).collection('rooms').doc(docRef.id).set({
+    userId: userEmail,
     role: "owner",
     createdAt: new Date(),
     roomId: docRef.id,

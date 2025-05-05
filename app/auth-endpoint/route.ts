@@ -9,11 +9,19 @@ export async function POST(req: NextRequest) {
   const { sessionClaims } = await auth();
   const { room } = await req.json();
 
-  const session = liveblocks.prepareSession(sessionClaims?.email!, {
+  if (!sessionClaims?.email) {
+    return NextResponse.json({
+      message: "Session email is missing."
+    }, {
+      status: 400
+    });
+  }
+
+  const session = liveblocks.prepareSession(sessionClaims.email, {
     userInfo: {
-      name: sessionClaims?.fullName!,
-      email: sessionClaims?.email!,
-      avatar: sessionClaims?.image!,
+      name: sessionClaims?.fullName || "Unknown",
+      email: sessionClaims.email,
+      avatar: sessionClaims?.image || "",
     },
   });
 

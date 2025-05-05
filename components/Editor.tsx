@@ -15,7 +15,7 @@ import * as Y from "yjs";
 
 type EditorProps = {
     doc: Y.Doc;
-    provider: any;
+    provider: LiveblocksYjsProvider;
     darkMode: boolean;
   }
 
