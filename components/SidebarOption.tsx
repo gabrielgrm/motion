@@ -29,7 +29,12 @@ export default function SidebarOption({ href, id }: SidebarOptionProps) {
           : 'border-gray-400 text-black'
       )}
     >
-      <p className="truncate">{data.tittle /* ou data.tittle, conforme seu schema */}</p>
+      <p
+        className="truncate max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap"
+        title={data.tittle} // Tooltip para mostrar o texto completo ao passar o mouse
+      >
+        {data.tittle}
+      </p>
     </Link>
   )
 }

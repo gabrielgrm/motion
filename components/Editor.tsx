@@ -40,7 +40,7 @@ type EditorProps = {
           className="min-h-screen"
           editor={editor}
           theme={
-            darkMode? "dark ": "light"
+            darkMode? "dark": "light"
           }
         />
       </div>
@@ -48,7 +48,6 @@ type EditorProps = {
   }
 
 function Editor() {
-  // 1) call the hook!
   const room = useRoom()
 
   const [doc, setDoc] = useState<Y.Doc>()

@@ -14,7 +14,7 @@ import ManageUsers from "./ManageUsers"
 import Avatars from "./Avatars"
 
 function Document({id}: {id: string}) {
-  const [data, loading, error] = useDocumentData(doc(db, "documents", id))
+  const [data] = useDocumentData(doc(db, "documents", id))
   const [input, setInput] = useState("")
   const [isUpdating, startTransition] = useTransition();
   const isOwner = useOwner();
@@ -41,7 +41,6 @@ function Document({id}: {id: string}) {
 
       <div className="flex max-w-6xl mx-auto justify-between">
         <form className="flex flex-1 space-x-2" onSubmit={updateTitle}>
-          {/* update title...*/}
           <Input
           className="border-black"
           type="text"
@@ -54,7 +53,6 @@ function Document({id}: {id: string}) {
           </Button>
           {isOwner && (
             <>
-            {/* Invite  */}
             <InviteUser/>
             <DeleteDocument/>
             </>
@@ -70,8 +68,6 @@ function Document({id}: {id: string}) {
 
 
       <hr className="pb-10"/>
-
-      {/* Collaborative Editor */}
 
       <Editor />
     </div>

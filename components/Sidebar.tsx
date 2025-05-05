@@ -33,7 +33,7 @@ function Sidebar() {
     owner: [],
     editor: [],
   })
-  const [data, loading, error] = useCollection(
+  const [data] = useCollection(
     user &&
       query(
         collectionGroup(db,"rooms"),
@@ -77,7 +77,6 @@ function Sidebar() {
     <>
       <div className="text-center">
         <NewDocumentButton/>
-        {/* My Documents */}
         {groupedData.owner.length === 0 ? (
           <h2 className="text-gray-500 font-semibold text-sm m-2 max-w-30">Nenhum documento encontrado</h2>
         ): (
@@ -89,7 +88,6 @@ function Sidebar() {
           </>
         )}
       </div>
-      {/* Shared with me  */}
       {groupedData.editor.length > 0 && (
         <>
           <h2 className="text-gray-500 font-semibold text-sm m-2">Compartilhado com Você</h2>
@@ -98,7 +96,6 @@ function Sidebar() {
           ))}
         </>
       )}
-      {/* List.... */}
     </>
   );
 
