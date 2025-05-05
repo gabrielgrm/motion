@@ -11,7 +11,6 @@ import "@blocknote/core/fonts/inter.css"
 import "@blocknote/shadcn/style.css"
 import stringToColor from "@/lib/stringToColor"
 import * as Y from "yjs";
-import { WebrtcProvider } from "y-webrtc";
 
 
 type EditorProps = {

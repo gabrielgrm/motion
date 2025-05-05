@@ -40,7 +40,7 @@ export default function DeleteDocument() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className="bg-red-500 rounded">
+        <Button className="bg-red-500" variant={'destructive'}>
           Deletar
         </Button>
       </DialogTrigger>
