@@ -1,16 +1,19 @@
-// app/doc/[id]/layout.tsx
-import RoomProvider from "@/components/RoomProvider"
-import { auth } from "@clerk/nextjs/server"    // ← note the “/server”
+import RoomProvider from "@/components/RoomProvider";
+import { auth } from "@clerk/nextjs/server";
+
+interface DocLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ id: string }>;
+}
 
 export default async function DocLayout({
   children,
   params,
-}: {
-  children: React.ReactNode
-  params: { id: string }
-}) {
-  const { id } = await params
-  await auth.protect()
+}: DocLayoutProps) {
+  const resolvedParams = await params;
+  const { id } = resolvedParams;
+  
+  await auth.protect();
 
-  return <RoomProvider roomId={id}>{children}</RoomProvider>
+  return <RoomProvider roomId={id}>{children}</RoomProvider>;
 }
