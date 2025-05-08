@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Motion - Plataforma de Colaboração em Tempo Real
 
-## Getting Started
+## 🚀 Visão Geral
 
-First, run the development server:
+Motion é uma plataforma moderna de colaboração em tempo real, desenvolvida com tecnologias de ponta para proporcionar uma experiência fluida de criação e compartilhamento de documentos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 [Acesse a plataforma](https://www.gabrielgrm.com/motion)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **📝 Edição em Tempo Real**
+  - Colaboração simultânea
+  - Cursor em tempo real dos colaboradores
+  - Sistema de autenticação seguro
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **🎨 Interface Moderna**
+  - Design minimalista e intuitivo
+  - Modo claro/escuro
+  - Animações suaves
+  - Responsivo para todos os dispositivos
 
-## Learn More
+- **👥 Gestão de Usuários**
+  - Compartilhamento de documentos
+  - Gerenciamento de permissões
+  - Visualização de usuários ativos
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:**
+  - Next.js
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Framer Motion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Backend e Serviços:**
+  - Firebase
+  - Clerk (Autenticação)
+  - Liveblocks (Colaboração em tempo real)
+  - BlockNote (Editor)
 
-## Deploy on Vercel
+## 🤝 Contribuição
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contribuições são sempre bem-vindas! Sinta-se à vontade para:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abrir um Pull Request
+
+⭐ Se você gostou deste projeto, por favor, considere dar uma estrela no GitHub!
