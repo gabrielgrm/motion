@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { SignInButton, SignedOut, useUser } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'
+
 
 export default function SplashScreen() {
   const [activated, setActivated] = useState(false)
@@ -24,13 +24,13 @@ export default function SplashScreen() {
   }, [])
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center">
+    <main className="relative flex min-h-screen items-center justify-center" style={{}}>
       {/* Background com opacidade */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/background.png')",
-          opacity: 0.10, // Ajuste a opacidade aqui
+          backgroundImage: "url('/background.svg')",
+          opacity: 1, // Ajuste a opacidade aqui
         }}
       ></div>
 
@@ -40,19 +40,17 @@ export default function SplashScreen() {
         className="relative flex flex-col items-center transition-all duration-100"
       >
         {/* LOGO */}
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={800}
-          height={800}
-          className={`transition-transform duration-500 ${
+        <h1 
+          className={`transition-transform text-9xl font-extralight duration-500 ${
             activated ? '-translate-y-10' : ''
           }`}
-        />
+        >
+          motion
+        </h1>
         <p
           className={`transition-transform duration-500 mt-7 text-gray-600 text-center ${
             activated ? '-translate-y-10' : ''
-          }`}
+          }`}// Adicione a fonte aqui
         >
           Uma plataforma para colaboração em tempo real e organização eficiente de ideias.
         </p>

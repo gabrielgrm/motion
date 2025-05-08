@@ -18,7 +18,7 @@ function Breadcrumbs() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink href="/home">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
         {segments.map((segment, index) => {

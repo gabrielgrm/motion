@@ -17,10 +17,10 @@ export default function LayoutWrapper({
     <>
       {!isSplashScreen && <Header />}
 
-      <div className={`flex min-h-screen ${isSplashScreen ? "" : "border-2"}`}>
+      <div className={`flex ${isSplashScreen ? "" : "border-2"}`}>
         {!isSplashScreen && <Sidebar />}
 
-        <div className="flex-1 p-4 bg-gray-100 overflow-y-auto">
+        <div className="flex-1 bg-gray-100 overflow-y-auto">
           {children}
         </div>
       </div>
